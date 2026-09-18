@@ -1,5 +1,5 @@
-# Name:
-# Date:
+# Name: Zakariah Hall
+# Date: September 18, 2026
 # Course: COMP 163
 # Project 1: Paycheck Calculator
 
@@ -26,3 +26,16 @@
 # Chapters 1 and 2 only. Use variables, input(), arithmetic, type conversion,
 # and print(). Do not use if statements, loops, functions, or imports.
 # Your code runs top to bottom, once.
+name = input("Enter employee name: ")
+hours = float(input("Enter hours worked: "))
+rate = float(input("Enter hourly rate: "))
+tax_rate = float(input("Enter tax rate: "))
+
+gross = hours * rate
+tax = gross * (tax_rate / 100)
+net = gross - tax
+
+print(f"Employee: {name}")
+print(f"Gross pay: ${gross:.2f}")
+print(f"Tax withheld: ${tax:.2f}")
+print(f"Net pay: ${net:.2f}")
